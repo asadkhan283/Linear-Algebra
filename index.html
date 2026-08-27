@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<form action="https://api.web3forms.com/submit" method="POST"> <input type="hidden" name="access_key" value="0966b3dd-2c99-4b4a-b995-6e6e6f163fb0"> <input type="text" name="name" placeholder="Your Name" required> <input type="email" name="email" placeholder="Your Student Email" required> <textarea name="message" required></textarea> <button type="submit">Submit</button></form> 
+
+
+
+    <title>Dr. Muhammad Asad Iqbal | Faculty Portfolio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Times New Roman', Times, serif, Arial, sans-serif; background: #fcfdfe; color: #1e293b; line-height: 1.6; }
+        
+        /* ACADEMIC NAVIGATION */
+        nav { background: #ffffff; padding: 15px 7%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 15px rgba(0,0,0,0.05); border-bottom: 2px solid #123b70; }
+        .logo { font-size: 20px; font-weight: bold; color: #123b70; letter-spacing: 0.5px; }
+        nav ul { list-style: none; display: flex; gap: 30px; }
+        nav a { text-decoration: none; color: #475569; font-size: 15px; font-weight: 600; transition: color 0.2s; }
+        nav a:hover { color: #123b70; }
+
+        /* HERO / FACULTY PROFILE BRIEF */
+        .hero { background: linear-gradient(135deg, #0f172a, #1e3a8a); color: white; padding: 90px 7%; border-bottom: 4px solid #2879a9; }
+        .hero-container { max-width: 1100px; margin: auto; display: flex; align-items: center; gap: 50px; }
+        .profile { width: 180px; height: 180px; border-radius: 50%; background: #ffffff; color: #1e3a8a; display: flex; align-items: center; justify-content: center; font-size: 48px; font-weight: bold; flex-shrink: 0; border: 4px solid rgba(255,255,255,0.2); }
+        .hero h1 { font-size: 38px; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.5px; }
+        .hero h2 { font-size: 20px; font-weight: 400; color: #93c5fd; margin-bottom: 8px; }
+        .university { font-size: 16px; color: #cbd5e1; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
+        .hero p { max-width: 800px; font-size: 16px; color: #e2e8f0; font-family: Arial, sans-serif; }
+        
+        /* BUTTONS */
+        .button { display: inline-block; padding: 10px 24px; background: #ffffff; color: #1e3a8a; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 14px; font-family: Arial, sans-serif; transition: background 0.2s; border: 1px solid transparent; }
+        .hero-buttons { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 25px; }
+        .github-button { background: transparent; color: #ffffff; border: 1px solid rgba(255,255,255,0.4); }
+        .github-button:hover { background: rgba(255,255,255,0.1); color: white; }
+        .button:hover { background: #f1f5f9; }
+
+        /* SECTIONS */
+        section { padding: 70px 7%; }
+        .container { max-width: 1100px; margin: auto; }
+        .title { font-size: 28px; color: #0f172a; margin-bottom: 8px; font-weight: bold; position: relative; padding-bottom: 8px; }
+        .title::after { content: ''; position: absolute; left: 0; bottom: 0; width: 50px; height: 3px; background: #2879a9; }
+        .subtitle { color: #64748b; margin-bottom: 40px; font-size: 15px; font-family: Arial, sans-serif; }
+
+        /* ABOUT */
+        .about { background: #ffffff; }
+        .about-text p { color: #334155; font-size: 17px; margin-bottom: 15px; text-align: justify; }
+
+        /* ACADEMIC PROFILE MATRIX */
+        .matrix-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .matrix-col h3 { font-size: 18px; color: #1e3a8a; margin-bottom: 15px; border-bottom: 1px solid #e2e8f0; padding-bottom: 5px; }
+        .matrix-list { list-style: none; }
+        .matrix-list li { padding: 6px 0; color: #334155; font-size: 15px; font-family: Arial, sans-serif; display: flex; align-items: baseline; }
+        .matrix-list li::before { content: "▪"; color: #2879a9; display: inline-block; width: 1em; font-size: 12px; }
+
+        /* CARDS / RESEARCH & PROJECTS */
+        .bg-alt { background: #f8fafc; }
+        .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+        .card { background: white; padding: 25px; border-radius: 4px; border: 1px solid #e2e8f0; transition: box-shadow 0.2s; text-align: left; }
+        .card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .card h3 { color: #0f172a; font-size: 18px; margin-bottom: 10px; }
+        .card p { color: #475569; font-size: 14px; font-family: Arial, sans-serif; margin-bottom: 15px; height: 70px; overflow: hidden; }
+        .card .card-link { font-size: 14px; color: #2879a9; text-decoration: none; font-weight: bold; font-family: Arial, sans-serif; }
+        .card .card-link:hover { text-decoration: underline; }
+
+        /* RESEARCH LIST */
+        .research-box { background: white; padding: 20px; margin-bottom: 15px; border: 1px solid #e2e8f0; border-left: 4px solid #1e3a8a; border-radius: 2px; }
+        .research-box h3 { font-size: 16px; color: #0f172a; margin-bottom: 5px; }
+        .research-box p { color: #64748b; font-size: 14px; font-family: Arial, sans-serif; }
+
+        /* ACCESS FORM SECTION */
+        .form-wrapper { max-width: 500px; background: white; padding: 35px; border-radius: 4px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+        .form-group { margin-bottom: 18px; }
+        .form-group label { display: block; margin-bottom: 6px; font-weight: bold; color: #0f172a; font-size: 14px; font-family: Arial, sans-serif; }
+        .form-group input { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 14px; font-family: Arial, sans-serif; }
+        .form-group input:focus { outline: none; border-color: #1e3a8a; }
+        .submit-btn { width: 100%; background: #1e3a8a; color: white; padding: 12px; border: none; border-radius: 4px; font-size: 15px; font-weight: bold; cursor: pointer; font-family: Arial, sans-serif; transition: background 0.2s; }
+        .submit-btn:hover { background: #102f52; }
+
+        /* CONTACT & FOOTER */
+        .contact { background: #0f172a; color: white; text-align: left; }
+        .contact .title { color: white; }
+        .contact .title::after { background: #93c5fd; }
+        .contact p { margin: 12px 0; font-size: 16px; font-family: Arial, sans-serif; }
+        footer { background: #020617; color: #94a3b8; text-align: center; padding: 20px; font-size: 13px; font-family: Arial, sans-serif; border-top: 1px solid #1e293b; }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 900px) {
+            .matrix-container, .cards { grid-template-columns: 1fr; gap: 20px; }
+            .hero-container { flex-direction: column; text-align: center; gap: 25px; }
+            .hero h1 { font-size: 30px; }
+            nav { flex-direction: column; gap: 15px; }
+            nav ul { gap: 15px; flex-wrap: wrap; justify-content: center; }
+            .title::after { left: 50% !important; transform: translateX(-50%); }
+            .title, .subtitle { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ACADEMIC NAVIGATION BAR -->
+    <nav>
+        <div class="logo">Dr. M. Asad Iqbal</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#profile-matrix">Academic Profile</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#materials">Course Materials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO / FACULTY PROFILE BRIEF -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="profile">MA</div>
+            <div>
+                <h1>Dr. Muhammad Asad Iqbal</h1>
+                <h2>Assistant Professor | Mathematics, AI & Machine Learning</h2>
+                <div class="university">Department of Mathematics</div>
+                <p>An academic portal presenting scholarly contributions in mathematical sciences alongside computational implementations in Deep Learning models, Topological Algebra, and Predictive Data Analytics.</p>
+                <div class="hero-buttons">
+                    <a href="#materials" class="button">Access Curricular Repositories</a>
+                    <a href="https://github.com" class="button github-button" target="_blank">Repository Profiles (GitHub)</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="title">About Me</h2>
+            <p class="subtitle">Academic background and structural statement</p>
+            <div class="about-text">
+                <p>My academic path unifies classical abstraction methodologies with contemporary data engineering concepts. By bridging rigorous formal structures with data-driven predictive systems, my objectives prioritize modern scientific resolutions for complex optimization spaces across both industrial configurations and institutional lecture halls.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPACT ACADEMIC MATRIX SECTION (NO REPETITIONS) -->
+    <section id="profile-matrix" class="bg-alt">
+        <div class="container">
+            <h2 class="title">Institutional Profile Matrix</h2>
+            <p class="subtitle">Consolidated operational divisions, theoretical competencies, and technical toolsets</p>
+            
+            <div class="matrix-container">
+                <!-- Research Specializations -->
+                <div class="matrix-col">
+                    <h3>Research Specialties</h3>
+                    <ul class="matrix-list">
+                        <li>Topological Groups & Vector Spaces</li>
+                        <li>Selection Principles & Game Theory</li>
+                        <li>Algebraic Topology</li>
+                        <li>Mathematical Modeling</li>
+                        <li>Machine Learning & AI Architectures</li>
